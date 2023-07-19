@@ -146,8 +146,23 @@
       <dv-border-box-8 :style="{width:'98%',height:'98%'}">
         <div class="flex flex-col items-center justify-center">
 <!--          渐变条-->
-          <div class="h-10 rounded-2xl p-4 m-4 mt-6 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-green-500 ..."></div>
-
+          <div class="flex flex-row w-full justify-center items-center">
+          <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
+          bg-gradient-to-r from-green-500  to-purple-200  border-2 border-white">
+            <div class="mx-auto mt-1 text-center  text-md font-sans text-black">车间一总量:</div>
+            <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-purple-600">100</div>
+          </div>
+          <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
+          bg-gradient-to-r from-purple-200  to-purple-500 border-2 border-white">
+            <div class="mx-auto mt-1 text-center text-md  font-sans text-black">车间二总量:</div>
+            <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-white">200</div>
+          </div>
+          <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
+          bg-gradient-to-r from-purple-500 to-blue-500 border-2 border-white">
+            <div class="mx-auto mt-1 text-center text-md  font-sans text-black">车间三总量:</div>
+            <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-white">300</div>
+          </div>
+          </div>
           <!--          一车间-->
           <dv-border-box-11 title="一车间" :style="{width:'95%',height:'95%'}">
             <div class="p-6">
