@@ -142,40 +142,64 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-row justify-center items-center div3   rounded-xl m-1 ">
-      <dv-border-box-8 :style="{width:'95%',height:'95%'}">
-        <div class="flex items-center justify-center">
-          <div class="grid grid-cols-4 gap-x-3 gap-y-5 pt-8">
-            <ToolItem toolId="1"/>
-            <ToolItem toolId="2"/>
-            <ToolItem toolId="3"/>
-            <ToolItem toolId="4"/>
-            <ToolItem toolId="5"/>
-            <ToolItem toolId="6"/>
-            <ToolItem toolId="7"/>
-            <ToolItem toolId="8"/>
-            <ToolItem toolId="9"/>
-            <ToolItem toolId="10"/>
-            <ToolItem toolId="11"/>
-            <ToolItem toolId="12"/>
-            <ToolItem toolId="13"/>
-            <ToolItem toolId="14"/>
-            <ToolItem toolId="15"/>
-            <ToolItem toolId="16"/>
-            <ToolItem toolId="17"/>
-            <ToolItem toolId="18"/>
-            <ToolItem toolId="19"/>
-            <ToolItem toolId="20"/>
-            <ToolItem toolId="21"/>
-            <ToolItem toolId="22"/>
-            <ToolItem toolId="23"/>
-            <ToolItem toolId="24"/>
-            <ToolItem toolId="25"/>
-            <ToolItem toolId="26"/>
-            <ToolItem toolId="27"/>
-            <ToolItem toolId="28"/>
+    <div class="flex flex-row justify-center items-center div3  gap-y-4  rounded-xl m-1 ">
+      <dv-border-box-8 :style="{width:'98%',height:'98%'}">
+        <div class="flex flex-col items-center justify-center">
+<!--          渐变条-->
+          <div class="h-10 rounded-2xl p-4 m-4 mt-6 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-green-500 ..."></div>
 
-          </div>
+          <!--          一车间-->
+          <dv-border-box-11 title="一车间" :style="{width:'95%',height:'95%'}">
+            <div class="p-6">
+              <div class="grid grid-cols-4 gap-x-1 gap-y-2 scale-90 pt-8">
+                <ToolItem toolId="4"/>
+                <ToolItem toolId="5"/>
+                <ToolItem toolId="6"/>
+                <ToolItem toolId="7"/>
+                <ToolItem toolId="20"/>
+                <ToolItem toolId="21"/>
+                <ToolItem toolId="22"/>
+                <ToolItem toolId="23"/>
+              </div>
+            </div>
+          </dv-border-box-11>
+
+<!--          二车间-->
+          <dv-border-box-11 title="二车间" :style="{width:'95%',height:'95%'}">
+            <div class="p-6">
+              <div class="grid grid-cols-4 gap-x-1 gap-y-2 scale-90 pt-8">
+                <ToolItem toolId="8"/>
+                <ToolItem toolId="9"/>
+                <ToolItem toolId="10"/>
+                <ToolItem toolId="11"/>
+                <ToolItem toolId="12"/>
+                <ToolItem toolId="13"/>
+                <ToolItem toolId="14"/>
+                <ToolItem toolId="15"/>
+                <ToolItem toolId="16"/>
+                <ToolItem toolId="17"/>
+                <ToolItem toolId="18"/>
+                <ToolItem toolId="19"/>
+
+              </div>
+            </div>
+          </dv-border-box-11>
+
+<!--          三车间-->
+          <dv-border-box-11 title="三车间" :style="{width:'95%',height:'95%'}">
+            <div class="p-6">
+              <div class="grid grid-cols-4 gap-x-1 gap-y-2 scale-90 pt-8">
+                <ToolItem toolId="24"/>
+                <ToolItem toolId="25"/>
+                <ToolItem toolId="26"/>
+                <ToolItem toolId="27"/>
+                <ToolItem toolId="28"/>
+                <ToolItem toolId="29"/>
+                <ToolItem toolId="30"/>
+                <ToolItem toolId="31"/>
+              </div>
+            </div>
+          </dv-border-box-11>
         </div>
       </dv-border-box-8>
     </div>
@@ -184,7 +208,7 @@
       <!--      表格3-->
       <div class="w-full h-1/3 ">
         <div class="flex justify-center items-center">
-        <dv-decoration-6 style="width:300px;height:30px;"/>
+          <dv-decoration-6 style="width:300px;height:30px;"/>
         </div>
         <el-row>
           <template>
