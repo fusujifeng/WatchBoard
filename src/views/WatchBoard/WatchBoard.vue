@@ -1,0 +1,469 @@
+<template>
+
+  <div class="parent w-screen h-screen " :style="myStyle">
+    <!--    顶部-->
+    <div
+        class=" flex flex-row justify-between items-center  div1 text-white rounded-xl">
+      <!--      title左-->
+      <h1 class="w-40 font-sans text-yellow-200 text-xl font-bold mx-auto
+     text-center">带班经理：{{ manager }}
+      </h1>
+      <!--      title中间-->
+      <div>
+        <dv-decoration-11 style="width:1400px;height:60px;">
+          <h1 class="font-sans text-green-200 text-3xl font-bold mx-auto
+     text-center">区熔智能派工系统
+          </h1>
+        </dv-decoration-11>
+        <div class="flex flex-row justify-around items-center pt-4">
+          <dv-decoration-8 style="width:280px;height:50px;"/>
+          <h2 class="font-sans text-green-200 text-lg font-bold">当月累计8寸送验量: </h2>
+          <h2 class="font-sans text-red-300 text-2xl font-bold">{{ inspectionQuantity }}</h2>
+          <dv-decoration-3 style="width:250px;height:30px;"/>
+          <h2 class="font-sans text-green-200 text-lg font-bold">当月累计8寸入库量: </h2>
+          <h2 class="font-sans text-red-300 text-2xl font-bold">{{ scheduledReceipt }}</h2>
+          <dv-decoration-8 :reverse="true" style="width:250px;height:50px;"/>
+        </div>
+      </div>
+      <!--      title右-->
+      <h1 class="w-40 font-sans text-yellow-200 text-xl font-bold mx-auto
+     text-center">{{ currentTime }}
+      </h1>
+    </div>
+    <div class="div2">
+      <!--      当前空闲人员-->
+      <div class="w-full h-1/3 ">
+
+        <div class="flex flex-col justify-center items-center rounded-2xl">
+
+          <dv-decoration-6 style="width:300px;height:30px;"/>
+          <dv-decoration-7 style="width:250px;height:30px;">
+            <div class="w-1/2 text-center font-bold  font-mono text-green-200">当前空闲人员</div>
+          </dv-decoration-7>
+
+        </div>
+        <el-row>
+          <div class="flex flex-row justify-center items-center  ">
+            <el-descriptions class="margin-top" :column="1" size="" border>
+              <el-descriptions-item>
+                <template slot="label">
+                  主操
+                </template>
+                人员A, 人员A, 人员A, 人员A 人员A
+              </el-descriptions-item>
+              <el-descriptions-item>
+                <template slot="label">
+                  辅操
+                </template>
+                人员B, 人员B, 人员B, 人员B, 人员B
+              </el-descriptions-item>
+              <el-descriptions-item>
+                <template slot="label">
+                  辅助
+                </template>
+                人员C, 人员C, 人员C, 人员C, 人员C
+              </el-descriptions-item>
+            </el-descriptions>
+          </div>
+        </el-row>
+      </div>
+
+      <!--      当前人员指数Echarts-->
+      <div class="w-full h-1/3 pb-12">
+        <div class="flex flex-row justify-center items-center rounded-2xl">
+          <dv-decoration-7 style="width:250px;height:30px;">
+            <div class="w-1/2 text-center font-bold  font-mono text-green-200">当前人员指数</div>
+          </dv-decoration-7>
+        </div>
+
+        <EchartsComp/>
+
+      </div>
+
+      <!--      表格3-->
+      <div class="w-full h-1/3 ">
+        <el-row>
+          <div class="flex flex-row justify-center items-center">
+            <dv-decoration-7 style="width:250px;height:30px;">
+              <div class="w-1/2 text-center font-bold  font-mono text-green-200">当前原料库存</div>
+            </dv-decoration-7>
+          </div>
+        </el-row>
+        <div class="flex flex-row">
+          <div class="w-1/3 ">
+            <div class="h-full w-full flex flex-row items-center justify-center border-2 border-white"
+                 style="background-color:#162c5a">
+              <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400 p-4 rounded-md">库房</div>
+            </div>
+          </div>
+          <div class="w-2/3">
+            <el-descriptions class="margin-top bg-gray-400" :column="1" size="mini" border
+                             labelStyle="color:white; text-align:center;    background-color: #162c5a;"
+                             contentStyle="color:#abf1f1; text-align:center;    background-color: #162c5a;">
+              <el-descriptions-item>
+                <template slot="label">
+                  W
+                </template>
+                1
+              </el-descriptions-item>
+              <el-descriptions-item>
+                <template slot="label">
+                  A
+                </template>
+                2
+              </el-descriptions-item>
+              <el-descriptions-item>
+                <template slot="label">
+                  T
+                </template>
+                3
+              </el-descriptions-item>
+              <el-descriptions-item>
+                <template slot="label">
+                  C
+                </template>
+                4
+              </el-descriptions-item>
+              <el-descriptions-item>
+                <template slot="label">
+                  F
+                </template>
+                5
+              </el-descriptions-item>
+              <el-descriptions-item>
+                <template slot="label">
+                  G
+                </template>
+                6
+              </el-descriptions-item>
+            </el-descriptions>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row justify-center items-center div3   rounded-xl m-1 ">
+      <dv-border-box-8 :style="{width:'95%',height:'95%'}">
+        <div class="flex items-center justify-center">
+          <div class="grid grid-cols-4 gap-x-3 gap-y-5 pt-8">
+            <ToolItem toolId="1"/>
+            <ToolItem toolId="2"/>
+            <ToolItem toolId="3"/>
+            <ToolItem toolId="4"/>
+            <ToolItem toolId="5"/>
+            <ToolItem toolId="6"/>
+            <ToolItem toolId="7"/>
+            <ToolItem toolId="8"/>
+            <ToolItem toolId="9"/>
+            <ToolItem toolId="10"/>
+            <ToolItem toolId="11"/>
+            <ToolItem toolId="12"/>
+            <ToolItem toolId="13"/>
+            <ToolItem toolId="14"/>
+            <ToolItem toolId="15"/>
+            <ToolItem toolId="16"/>
+            <ToolItem toolId="17"/>
+            <ToolItem toolId="18"/>
+            <ToolItem toolId="19"/>
+            <ToolItem toolId="20"/>
+            <ToolItem toolId="21"/>
+            <ToolItem toolId="22"/>
+            <ToolItem toolId="23"/>
+            <ToolItem toolId="24"/>
+            <ToolItem toolId="25"/>
+            <ToolItem toolId="26"/>
+            <ToolItem toolId="27"/>
+            <ToolItem toolId="28"/>
+
+          </div>
+        </div>
+      </dv-border-box-8>
+    </div>
+    <div class="div4 bg-cyan-200  border- border-blue-800 rounded-xl m-2">
+
+      <!--      表格3-->
+      <div class="w-full h-1/3 ">
+        <div class="flex justify-center items-center">
+        <dv-decoration-6 style="width:300px;height:30px;"/>
+        </div>
+        <el-row>
+          <template>
+            <el-row>
+              <div class="flex flex-row justify-center items-center mt-3">
+                <dv-decoration-7 style="width:250px;height:30px;">
+                  <div class="w-1/2 text-center font-bold  font-mono text-green-200">当前设备状态</div>
+                </dv-decoration-7>
+              </div>
+            </el-row>
+            <el-table
+                :data="tableDataToolStatus"
+                border
+                size="mini"
+                style="width: 100%"
+                :row-style="{height: '10px'}"
+            >
+              <el-table-column
+                  prop="date"
+                  label="颜色"
+                  align="center"
+                  width="100">
+              </el-table-column>
+              <el-table-column
+                  prop="name"
+                  label="抽空充气"
+                  align="center"
+                  width="150">
+              </el-table-column>
+              <el-table-column
+                  prop="address"
+                  align="center"
+                  label="台数">
+              </el-table-column>
+            </el-table>
+          </template>
+
+
+        </el-row>
+      </div>
+
+      <!--      表格4-->
+      <div class="w-full h-3/5  pt-5">
+        <el-row>
+          <template>
+            <el-row>
+              <div class="flex flex-row justify-center items-center mt-5">
+                <dv-decoration-7 style="width:250px;height:30px;">
+                  <div class="w-1/2 text-center font-bold  font-mono text-green-200">当前产品规格</div>
+                </dv-decoration-7>
+              </div>
+            </el-row>
+            <el-table
+                :data="tableDataProductSpecifications"
+                border
+                size="mini"
+                style="width: 100%">
+              <el-table-column
+                  prop="date"
+                  label="炉台"
+                  align="center"
+                  width="100">
+              </el-table-column>
+              <el-table-column
+                  prop="name"
+                  label="规格"
+                  align="center"
+                  width="150">
+              </el-table-column>
+              <el-table-column
+                  prop="address"
+                  align="center"
+                  label="导电类型">
+              </el-table-column>
+            </el-table>
+          </template>
+
+        </el-row>
+      </div>
+    </div>
+  </div>
+
+
+</template>
+
+
+<script src="">
+import ToolItem from "@/views/WatchBoard/components/ToolItem.vue";
+import EchartsComp from "@/views/WatchBoard/components/EchartsComp.vue";
+import bgProfile from '@/assets/image/img_3.png'
+import moment from 'moment';
+
+export default {
+  name: 'WatchBoard',
+  components: {ToolItem, EchartsComp},
+  props: {
+    toolId: ""
+  },
+  data() {
+    return {
+      inspectionQuantity: 1000,
+      scheduledReceipt: 1000,
+      myStyle: {
+        backgroundImage: `url(${bgProfile})`,
+        width: '100%',
+        height: '100%',
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover'
+      },
+      manager: '经理A',
+      tableDataProductSpecifications: [
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+        {
+          date: '10',
+          name: '105-145',
+          address: 'P'
+        },
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+        {
+          date: '10',
+          name: '105-145',
+          address: 'P'
+        },
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+        {
+          date: '10',
+          name: '105-145',
+          address: 'P'
+        },
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+        {
+          date: '10',
+          name: '105-145',
+          address: 'P'
+        },
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+        {
+          date: '10',
+          name: '105-145',
+          address: 'P'
+        },
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+        {
+          date: '10',
+          name: '105-145',
+          address: 'P'
+        },
+        {
+          date: '9',
+          name: '54-66',
+          address: 'N'
+        },
+
+
+      ],
+      tableDataToolStatus: [
+        {
+          date: 'red',
+          name: '预热',
+          address: '1'
+        },
+        {
+          date: 'pink',
+          name: '化料引晶',
+          address: '2'
+        }, {
+          date: 'green',
+          name: '扩肩',
+          address: '3'
+        },
+        {
+          date: 'green-700',
+          name: '保持',
+          address: '4'
+        },
+        {
+          date: 'orange',
+          name: '收尾',
+          address: '5'
+        },
+        {
+          date: 'yellow',
+          name: '降温',
+          address: '6'
+        },
+        {
+          date: 'yellow-700',
+          name: '拆装炉',
+          address: '7'
+        },
+      ],
+      tableFreePeople: [],
+      currentTime: ""
+    }
+  },
+  computed: {},
+  methods: {
+    getCurrentTime() {
+
+      this.currentTime = moment().format('YYYY-MM-HH hh:mm:ss');
+    },
+  },
+  mounted() {
+    this.getCurrentTime(); // 初始化时获取一次时间
+    setInterval(() => {
+      this.getCurrentTime(); // 每秒更新一次时间
+    }, 1000);
+  }
+}
+</script>
+
+<style scoped>
+.parent {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 11;
+}
+
+.div2 {
+  grid-area: 3 / 1 / 15 / 3;
+}
+
+.div3 {
+  grid-area: 3 / 3 / 15 / 9;
+}
+
+.div4 {
+  grid-area: 3 / 9 / 15 / 11;
+}
+
+/deep/ .el-table thead tr > th {
+  background-color: #162c5a;
+  color: #abf1f1
+}
+
+/deep/ .el-table tbody tr > td {
+  background-color: rgb(14, 29, 62);
+  color: #ffffff;
+  padding: 2px;
+}
+
+/deep/ .el-table tbody tr:hover > td {
+  background-color: #22608a !important;
+}
+
+
+</style>
