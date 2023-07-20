@@ -92,7 +92,7 @@
           </div>
         </el-row>
         <template>
-          <el-carousel height="220px" direction="vertical" >
+          <el-carousel height="220px" direction="vertical" :interval="2000" >
             <el-carousel-item>
               <div class="flex flex-row">
                 <div class="w-1/3 ">
@@ -318,7 +318,7 @@
           </dv-border-box-11>
 
           <!--          三车间-->
-          <dv-border-box-11 title="三车间" :style="{width:'95%',height:'95%'}">
+          <dv-border-box-11 title="三车间"  :style="{width:'95%',height:'95%'}">
             <div class="p-6">
               <div class="grid grid-cols-4 gap-x-1 gap-y-2 scale-90 pt-8">
                 <ToolItem toolId="24"/>
@@ -637,7 +637,7 @@ export default {
 }
 
 /deep/ .el-table tbody tr > td {
-  background-color: rgb(14, 29, 62);
+  background-color: #282976;
   color: #ffffff;
   padding: 2px;
 }
@@ -645,13 +645,6 @@ export default {
 /deep/ .el-table tbody tr:hover > td {
   background-color: #22608a !important;
 }
-
-/*
-/deep/ .el-descriptions .is-bordered .el-descriptions-item__cell {
-  border: 1px solid #EBEEF5;
-  padding: 12px 10px;
-}
-*/
 
 .pilotLamp{
   @apply w-5 h-5 rounded-full
