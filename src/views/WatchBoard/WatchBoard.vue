@@ -18,10 +18,10 @@
         <div class="flex flex-row justify-around items-center pt-4">
           <dv-decoration-8 style="width:280px;height:50px;"/>
           <h2 class="font-sans text-green-200 text-lg font-bold">当月累计8寸送验量: </h2>
-          <h2 class="font-sans text-red-300 text-2xl font-bold">{{ inspectionQuantity }}</h2>
+          <h2 class="font-sans text-red-300 text-3xl font-bold">{{ inspectionQuantity }}</h2>
           <dv-decoration-3 style="width:250px;height:30px;"/>
           <h2 class="font-sans text-green-200 text-lg font-bold">当月累计8寸入库量: </h2>
-          <h2 class="font-sans text-red-300 text-2xl font-bold">{{ scheduledReceipt }}</h2>
+          <h2 class="font-sans text-red-300 text-3xl font-bold">{{ scheduledReceipt }}</h2>
           <dv-decoration-8 :reverse="true" style="width:250px;height:50px;"/>
         </div>
       </div>
