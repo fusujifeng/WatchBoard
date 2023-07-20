@@ -462,26 +462,22 @@ export default {
     getColor(colorType) {
       switch (colorType) {
         case "red":
-          return "w-5 h-5 bg-red-500 rounded-full"
-
+          return "pilotLamp bg-red-500 "
         case "pink":
-          return "w-5 h-5 bg-red-300 rounded-full"
+          return "pilotLamp bg-red-300 "
         case "green":
-          return "w-5 h-5 bg-green-400 rounded-full"
+          return "pilotLamp bg-green-400 "
         case "green2":
-          return "w-5 h-5 bg-green-700 rounded-full"
+          return "pilotLamp bg-green-700 "
         case "yellow2":
-          return "w-5 h-5 bg-yellow-500 rounded-full"
+          return "pilotLamp bg-yellow-500 "
         case "yellow":
-          return "w-5 h-5 bg-yellow-300 rounded-full"
+          return "pilotLamp bg-yellow-300 "
         case "blue":
-          return "w-5 h-5 bg-blue-500 rounded-full"
+          return "pilotLamp bg-blue-500 "
         default:
-          return "w-5 h-5 bg-yellow-200 rounded-full"
-
+          return "pilotLamp bg-white "
       }
-
-
     }
   },
   mounted() {
@@ -532,6 +528,11 @@ export default {
 /deep/ .el-table tbody tr:hover > td {
   background-color: #22608a !important;
 }
+
+.pilotLamp{
+  @apply w-5 h-5 rounded-full
+}
+
 
 
 </style>

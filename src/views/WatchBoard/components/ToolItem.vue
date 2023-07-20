@@ -1,7 +1,7 @@
 <template>
   <dv-border-box-13  >
     <div class="flex flex-row w-60 h-16 justify-around items-center   scale-90">
-      <div class="flex flex-row justify-center items-center w-8 h-8 bg-gradient-to-r from-green-200 to-green-700 rounded-full ">
+      <div :class="getColor(toolId) ">
         <p class="text-sm text-center mx-auto">{{ toolId }}</p>
       </div>
       <div >
@@ -29,7 +29,26 @@ export default {
     }
     },
   methods: {
-
+    getColor(colorType) {
+      switch (colorType) {
+        case "4":
+          return "statusLamp bg-red-500 "
+        case "5":
+          return "statusLamp bg-red-300 "
+        case "6":
+          return "statusLamp bg-green-400 "
+        case "7":
+          return "statusLamp bg-green-700 "
+        case "20":
+          return "statusLamp bg-yellow-500 "
+        case "21":
+          return "statusLamp bg-yellow-300 "
+        case "22":
+          return "statusLamp bg-blue-500 "
+        default:
+          return "statusLamp bg-white "
+      }
+    }
   },
 }
 </script>
@@ -37,5 +56,7 @@ export default {
 
 
 <style scoped>
-
+.statusLamp{
+  @apply flex flex-row justify-center items-center w-8 h-8  rounded-full
+}
 </style>
