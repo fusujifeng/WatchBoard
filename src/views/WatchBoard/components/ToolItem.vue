@@ -8,7 +8,7 @@
         <h2 class="text-sm font-sans font-medium text-white">当前:标签二</h2>
         <h2 class="text-sm font-sans font-medium mt-1 text-white">推荐:标签三</h2>
       </div>
-      <el-progress type="circle" :width="32" :percentage="100" status="success" stroke-width="4" :show-text="false"		 ></el-progress>
+      <el-progress type="circle" :width="32" :percentage="100" status="success" :stroke-width="4" :show-text="false"		 ></el-progress>
 
 
     </div>

@@ -44,24 +44,26 @@
         </div>
         <el-row>
           <div class="flex flex-row justify-center items-center  ">
-            <el-descriptions class="margin-top" :column="1" size="" border>
+            <el-descriptions class="margin-top" :column="1"  border
+                             :labelStyle="{color:'#abf1f1', textAlign:'center',backgroundColor:'#162c5a'}"
+                             :contentStyle="{color:'#ffffff', textAlign:'center',backgroundColor: 'rgb(14, 29, 62)',width:'320px'}">
               <el-descriptions-item>
                 <template slot="label">
                   主操
                 </template>
-                人员A, 人员A, 人员A, 人员A 人员A
+                人员A, 人员A, 人员A, 人员A 人员A  人员A 人员A 人员A 人员A 人员A 人员A 人员A 人员A
               </el-descriptions-item>
               <el-descriptions-item>
                 <template slot="label">
                   辅操
                 </template>
-                人员B, 人员B, 人员B, 人员B, 人员B
+                人员B, 人员B, 人员B, 人员B, 人员B 人员B 人员B 人员B 人员B 人员B 人员B 人员B 人员B
               </el-descriptions-item>
               <el-descriptions-item>
                 <template slot="label">
                   辅助
                 </template>
-                人员C, 人员C, 人员C, 人员C, 人员C
+                人员C, 人员C, 人员C, 人员C, 人员C 人员C  人员C  人员C  人员C  人员C 人员C  人员C  人员C
               </el-descriptions-item>
             </el-descriptions>
           </div>
@@ -528,6 +530,13 @@ export default {
 /deep/ .el-table tbody tr:hover > td {
   background-color: #22608a !important;
 }
+
+/*
+/deep/ .el-descriptions .is-bordered .el-descriptions-item__cell {
+  border: 1px solid #EBEEF5;
+  padding: 12px 10px;
+}
+*/
 
 .pilotLamp{
   @apply w-5 h-5 rounded-full
