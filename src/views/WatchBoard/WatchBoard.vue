@@ -145,23 +145,23 @@
     <div class="flex flex-row justify-center items-center div3  gap-y-4  rounded-xl m-1 ">
       <dv-border-box-8 :style="{width:'98%',height:'98%'}">
         <div class="flex flex-col items-center justify-center">
-<!--          渐变条-->
+          <!--          渐变条-->
           <div class="flex flex-row w-full justify-center items-center">
-          <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
+            <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
           bg-gradient-to-r from-green-500  to-purple-200  border-2 border-white">
-            <div class="mx-auto mt-1 text-center  text-md font-sans text-black">车间一总量:</div>
-            <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-purple-600">100</div>
-          </div>
-          <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
+              <div class="mx-auto mt-1 text-center  text-md font-sans text-black">车间一总量:</div>
+              <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-purple-600">100</div>
+            </div>
+            <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
           bg-gradient-to-r from-purple-200  to-purple-500 border-2 border-white">
-            <div class="mx-auto mt-1 text-center text-md  font-sans text-black">车间二总量:</div>
-            <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-white">200</div>
-          </div>
-          <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
+              <div class="mx-auto mt-1 text-center text-md  font-sans text-black">车间二总量:</div>
+              <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-white">200</div>
+            </div>
+            <div class="flex flex-row justify-center items-center h-10 rounded-3xl p-4 m-4 mt-6 w-1/4
           bg-gradient-to-r from-purple-500 to-blue-500 border-2 border-white">
-            <div class="mx-auto mt-1 text-center text-md  font-sans text-black">车间三总量:</div>
-            <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-white">300</div>
-          </div>
+              <div class="mx-auto mt-1 text-center text-md  font-sans text-black">车间三总量:</div>
+              <div class="mx-auto mt-1 text-center font-bold text-2xl font-sans text-white">300</div>
+            </div>
           </div>
           <!--          一车间-->
           <dv-border-box-11 title="一车间" :style="{width:'95%',height:'95%'}">
@@ -179,7 +179,7 @@
             </div>
           </dv-border-box-11>
 
-<!--          二车间-->
+          <!--          二车间-->
           <dv-border-box-11 title="二车间" :style="{width:'95%',height:'95%'}">
             <div class="p-6">
               <div class="grid grid-cols-4 gap-x-1 gap-y-2 scale-90 pt-8">
@@ -200,7 +200,7 @@
             </div>
           </dv-border-box-11>
 
-<!--          三车间-->
+          <!--          三车间-->
           <dv-border-box-11 title="三车间" :style="{width:'95%',height:'95%'}">
             <div class="p-6">
               <div class="grid grid-cols-4 gap-x-1 gap-y-2 scale-90 pt-8">
@@ -242,10 +242,15 @@
                 :row-style="{height: '10px'}"
             >
               <el-table-column
-                  prop="date"
+                  prop="color"
                   label="颜色"
                   align="center"
                   width="100">
+                <template slot-scope="scope">
+                  <div class="flex flex-row justify-center items-center">
+                    <div :class="getColor(scope.row.color)"></div>
+                  </div>
+                </template>
               </el-table-column>
               <el-table-column
                   prop="name"
@@ -282,7 +287,7 @@
                 size="mini"
                 style="width: 100%">
               <el-table-column
-                  prop="date"
+                  prop="color"
                   label="炉台"
                   align="center"
                   width="100">
@@ -336,72 +341,72 @@ export default {
       manager: '经理A',
       tableDataProductSpecifications: [
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
         {
-          date: '10',
+          color: '10',
           name: '105-145',
           address: 'P'
         },
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
         {
-          date: '10',
+          color: '10',
           name: '105-145',
           address: 'P'
         },
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
         {
-          date: '10',
+          color: '10',
           name: '105-145',
           address: 'P'
         },
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
         {
-          date: '10',
+          color: '10',
           name: '105-145',
           address: 'P'
         },
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
         {
-          date: '10',
+          color: '10',
           name: '105-145',
           address: 'P'
         },
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
         {
-          date: '10',
+          color: '10',
           name: '105-145',
           address: 'P'
         },
         {
-          date: '9',
+          color: '9',
           name: '54-66',
           address: 'N'
         },
@@ -410,36 +415,36 @@ export default {
       ],
       tableDataToolStatus: [
         {
-          date: 'red',
+          color: 'red',
           name: '预热',
           address: '1'
         },
         {
-          date: 'pink',
+          color: 'pink',
           name: '化料引晶',
           address: '2'
         }, {
-          date: 'green',
+          color: 'green',
           name: '扩肩',
           address: '3'
         },
         {
-          date: 'green-700',
+          color: 'green2',
           name: '保持',
           address: '4'
         },
         {
-          date: 'orange',
+          color: 'yellow2',
           name: '收尾',
           address: '5'
         },
         {
-          date: 'yellow',
+          color: 'yellow',
           name: '降温',
           address: '6'
         },
         {
-          date: 'yellow-700',
+          color: 'blue',
           name: '拆装炉',
           address: '7'
         },
@@ -454,6 +459,30 @@ export default {
 
       this.currentTime = moment().format('YYYY-MM-HH hh:mm:ss');
     },
+    getColor(colorType) {
+      switch (colorType) {
+        case "red":
+          return "w-5 h-5 bg-red-500 rounded-full"
+
+        case "pink":
+          return "w-5 h-5 bg-red-300 rounded-full"
+        case "green":
+          return "w-5 h-5 bg-green-400 rounded-full"
+        case "green2":
+          return "w-5 h-5 bg-green-700 rounded-full"
+        case "yellow2":
+          return "w-5 h-5 bg-yellow-500 rounded-full"
+        case "yellow":
+          return "w-5 h-5 bg-yellow-300 rounded-full"
+        case "blue":
+          return "w-5 h-5 bg-blue-500 rounded-full"
+        default:
+          return "w-5 h-5 bg-yellow-200 rounded-full"
+
+      }
+
+
+    }
   },
   mounted() {
     this.getCurrentTime(); // 初始化时获取一次时间
