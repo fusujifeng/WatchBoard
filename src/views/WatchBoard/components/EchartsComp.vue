@@ -1,6 +1,6 @@
 <template>
 
-  <div  id="echartsContainer" class="w-full h-full bg-white opacity-90"></div>
+  <div  id="echartsContainer" class="w-full h-full  opacity-90"></div>
 
 </template>
 
@@ -50,17 +50,26 @@ export default {
           }
         },
         legend: {
+          textStyle:{//图例文字的样式
+            color:'#ffffff',
+            fontSize:13
+          },
           left: 'center',
           bottom: 1,
-          data: ['拉晶次数', '出门次数']
+          data: ['拉晶次数', '出门次数'],
         },
         xAxis: [
           {
             type: 'category',
+            color:'#ffffff',
             data: ['刘愿', '李佳伟', '李东', '刘冶平'],
             axisPointer: {
               type: 'shadow'
+            },
+            axisLabel:{
+              color:"#ffffff"
             }
+
           }
         ],
         yAxis: [
