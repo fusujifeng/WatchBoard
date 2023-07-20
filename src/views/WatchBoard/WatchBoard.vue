@@ -93,7 +93,7 @@
         </el-row>
         <template>
           <el-carousel height="220px" direction="vertical" >
-            <el-carousel-item v-for="item in 4" :key="item">
+            <el-carousel-item>
               <div class="flex flex-row">
                 <div class="w-1/3 ">
                   <div class="h-full w-full flex flex-row items-center justify-center border-2 border-white"
@@ -138,6 +138,114 @@
                     <el-descriptions-item>
                       <template slot="label">
                         G
+                      </template>
+                      6
+                    </el-descriptions-item>
+                  </el-descriptions>
+
+                </div>
+              </div>
+            </el-carousel-item>
+
+            <el-carousel-item>
+              <div class="flex flex-row">
+                <div class="w-1/3 ">
+                  <div class="h-full w-full flex flex-row items-center justify-center border-2 border-white"
+                       style="background-color:#162c5a">
+                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400 p-4 rounded-md">库房</div>
+                  </div>
+                </div>
+                <div class="w-2/3">
+                  <el-descriptions class="margin-top bg-gray-400" :column="1" size="mini" border
+                                   :labelStyle="{color:'white', textAlign:'center',backgroundColor:'#162c5a'}"
+                                   :contentStyle="{color:'#abf1f1', textAlign:'center',backgroundColor: '#162c5a'}">
+                    <el-descriptions-item>
+                      <template slot="label">
+                        W2
+                      </template>
+                      1
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        A2
+                      </template>
+                      2
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        T2
+                      </template>
+                      3
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        C2
+                      </template>
+                      4
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        F2
+                      </template>
+                      5
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        G2
+                      </template>
+                      6
+                    </el-descriptions-item>
+                  </el-descriptions>
+
+                </div>
+              </div>
+            </el-carousel-item>
+
+            <el-carousel-item>
+              <div class="flex flex-row">
+                <div class="w-1/3 ">
+                  <div class="h-full w-full flex flex-row items-center justify-center border-2 border-white"
+                       style="background-color:#162c5a">
+                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400 p-4 rounded-md">库房</div>
+                  </div>
+                </div>
+                <div class="w-2/3">
+                  <el-descriptions class="margin-top bg-gray-400" :column="1" size="mini" border
+                                   :labelStyle="{color:'white', textAlign:'center',backgroundColor:'#162c5a'}"
+                                   :contentStyle="{color:'#abf1f1', textAlign:'center',backgroundColor: '#162c5a'}">
+                    <el-descriptions-item>
+                      <template slot="label">
+                        W3
+                      </template>
+                      1
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        A3
+                      </template>
+                      2
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        T3
+                      </template>
+                      3
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        C3
+                      </template>
+                      4
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        F3
+                      </template>
+                      5
+                    </el-descriptions-item>
+                    <el-descriptions-item>
+                      <template slot="label">
+                        G3
                       </template>
                       6
                     </el-descriptions-item>
