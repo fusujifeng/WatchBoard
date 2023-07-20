@@ -98,8 +98,8 @@
           </div>
           <div class="w-2/3">
             <el-descriptions class="margin-top bg-gray-400" :column="1" size="mini" border
-                             labelStyle="color:white; text-align:center;    background-color: #162c5a;"
-                             contentStyle="color:#abf1f1; text-align:center;    background-color: #162c5a;">
+                             :labelStyle="{color:'white', textAlign:'center',backgroundColor:'#162c5a'}"
+                             :contentStyle="{color:'#abf1f1', textAlign:'center',backgroundColor: '#162c5a'}">
               <el-descriptions-item>
                 <template slot="label">
                   W
