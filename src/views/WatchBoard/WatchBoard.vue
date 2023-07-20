@@ -5,7 +5,7 @@
     <div
         class=" flex flex-row justify-between items-center  div1 text-white rounded-xl">
       <!--      title左-->
-      <h1 class="w-40 font-sans text-yellow-200 text-xl font-bold mx-auto
+      <h1 class="w-40 titleLeftManageAndRightTimeStyle text-xl font-bold mx-auto
      text-center">带班经理：{{ manager }}
       </h1>
       <!--      title中间-->
@@ -26,7 +26,7 @@
         </div>
       </div>
       <!--      title右-->
-      <h1 class="w-40 font-sans text-yellow-200 text-xl font-bold mx-auto
+      <h1 class="w-40 titleLeftManageAndRightTimeStyle text-xl font-bold mx-auto
      text-center">{{ currentTime }}
       </h1>
     </div>
@@ -98,7 +98,7 @@
                 <div class="w-1/3 ">
                   <div class="h-full w-full flex flex-row items-center justify-center border-2 border-white"
                        style="background-color:#162c5a">
-                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400 p-4 rounded-md">库房</div>
+                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400  rounded-md">库房</div>
                   </div>
                 </div>
                 <div class="w-2/3">
@@ -152,7 +152,7 @@
                 <div class="w-1/3 ">
                   <div class="h-full w-full flex flex-row items-center justify-center border-2 border-white"
                        style="background-color:#162c5a">
-                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400 p-4 rounded-md">库房</div>
+                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400  rounded-md">库房</div>
                   </div>
                 </div>
                 <div class="w-2/3">
@@ -206,7 +206,7 @@
                 <div class="w-1/3 ">
                   <div class="h-full w-full flex flex-row items-center justify-center border-2 border-white"
                        style="background-color:#162c5a">
-                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400 p-4 rounded-md">库房</div>
+                    <div class="w-1/2 text-center font-bold font-sans text-2xl bg-blue-400  rounded-md">库房</div>
                   </div>
                 </div>
                 <div class="w-2/3">
@@ -657,6 +657,9 @@ export default {
   @apply w-5 h-5 rounded-full
 }
 
+.titleLeftManageAndRightTimeStyle{
+  @apply font-sans text-purple-300
+}
 
 
 </style>
