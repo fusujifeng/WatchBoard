@@ -637,7 +637,7 @@ export default {
 }
 
 /deep/ .el-table tbody tr > td {
-  background-color: #282976;
+  background-color: rgb(14, 29, 62);
   color: #ffffff;
   padding: 2px;
 }
